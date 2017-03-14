@@ -5,6 +5,8 @@
  */
 package cryptographer;
 
+import cryptographer.ciphering.caesarCipher;
+
 /**
  *
  * @author sami
@@ -22,6 +24,8 @@ public class simpleTest {
     }
 
     public static void main(String[] args) {
+        caesarCipher caesar = new caesarCipher(2);
+        System.out.println(caesar.cipher("abc dfg öäå"));
     }
 
 }
