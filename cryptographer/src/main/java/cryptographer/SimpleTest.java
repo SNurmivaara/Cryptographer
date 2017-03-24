@@ -5,17 +5,17 @@
  */
 package cryptographer;
 
-import cryptographer.ciphering.caesarCipher;
+import cryptographer.ciphering.CaesarCipher;
 
 /**
  *
  * @author sami
  */
-public class simpleTest {
+public class SimpleTest {
 
     int testattava;
 
-    public simpleTest(int x) {
+    public SimpleTest(int x) {
         this.testattava = x;
     }
     
@@ -24,7 +24,7 @@ public class simpleTest {
     }
 
     public static void main(String[] args) {
-        caesarCipher caesar = new caesarCipher(2);
+        CaesarCipher caesar = new CaesarCipher(2);
         System.out.println(caesar.cipher("abc dfg öäå"));
     }
 

@@ -5,7 +5,7 @@
  */
 package cryptographer;
 
-import cryptographer.simpleTest;
+import cryptographer.SimpleTest;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,14 +17,14 @@ import static org.junit.Assert.*;
  *
  * @author sami
  */
-public class simpleTestTest {
+public class SimpleTestTest {
 
     /**
-     * Test of simpleTest method, of class simpleTest.
+     * Test of SimpleTest method, of class SimpleTest.
      */
     @Test
     public void logiikkaToimii() {
-        simpleTest testi = new simpleTest(2);
+        SimpleTest testi = new SimpleTest(2);
         assertTrue(testi.totta());
     }
     
