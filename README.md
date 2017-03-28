@@ -6,5 +6,5 @@ This program will be developed incrementally and iteratively during the followin
 
 ## Documentation (in Finnish)
 * [aiheen kuvaus](documentation/aiheenKuvausJaRakenne.md)
-* [aiheen määrittely](documentation/aiheenmaarittely.md)
+* [aiheen määrittely](documentation/aihemaarittely.md)
 * [tuntikirjanpito](documentation/tuntikirjanpito.md)
