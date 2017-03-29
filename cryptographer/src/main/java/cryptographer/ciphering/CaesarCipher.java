@@ -11,53 +11,67 @@ public class CaesarCipher implements Cipher {
     private final String alphabet = "abcdefghijklmnopqrstuvwxyz";
     private int shift;
 
-    public CaesarCipher(int shift) {
-        if (shift < 0) {
-            shift = 0;
-        } else {
+    public boolean setShift(int shift) {
+        if (shift >= 0) {
             this.shift = shift;
+            return true;
+        } else {
+            this.shift = -1;
+            return false;
         }
+    }
+
+    public int getShift() {
+        return this.shift;
     }
 
     @Override
     public String cipher(String input) {
 
-        input = input.toLowerCase();
-        String cipherText = "";
+        if (this.shift != -1) {
+            input = input.toLowerCase();
+            String cipherText = "";
 
-        for (int i = 0; i < input.length(); i++) {
-            char replaceVal = input.charAt(i);
-            if (this.alphabet.indexOf(input.charAt(i)) >= 0) {
-                int charPosition = this.alphabet.indexOf(input.charAt(i));
-                int keyVal = (charPosition + shift) % 26;
-                replaceVal = this.alphabet.charAt(keyVal);
+            for (int i = 0; i < input.length(); i++) {
+                char replaceVal = input.charAt(i);
+                if (this.alphabet.indexOf(input.charAt(i)) >= 0) {
+                    int charPosition = this.alphabet.indexOf(input.charAt(i));
+                    int keyVal = (charPosition + shift) % 26;
+                    replaceVal = this.alphabet.charAt(keyVal);
+                }
+                cipherText += replaceVal;
             }
-            cipherText += replaceVal;
-        }
 
-        return cipherText;
+            return cipherText;
+        } else {
+            return "shift not set!";
+        }
     }
 
     @Override
     public String decipher(String input) {
 
-        input = input.toLowerCase();
-        String plainText = "";
+        if (shift != -1) {
+            input = input.toLowerCase();
+            String plainText = "";
 
-        for (int i = 0; i < input.length(); i++) {
-            char replaceVal = input.charAt(i);
-            if (this.alphabet.indexOf(input.charAt(i)) >= 0) {
-                int charPosition = this.alphabet.indexOf(input.charAt(i));
-                int keyVal = (charPosition - shift) % 26;
-                if (keyVal < 0) {
-                    keyVal = 26 + keyVal;
+            for (int i = 0; i < input.length(); i++) {
+                char replaceVal = input.charAt(i);
+                if (this.alphabet.indexOf(input.charAt(i)) >= 0) {
+                    int charPosition = this.alphabet.indexOf(input.charAt(i));
+                    int keyVal = (charPosition - shift) % 26;
+                    if (keyVal < 0) {
+                        keyVal = 26 + keyVal;
+                    }
+                    replaceVal = this.alphabet.charAt(keyVal);
                 }
-                replaceVal = this.alphabet.charAt(keyVal);
+                plainText += replaceVal;
             }
-            plainText += replaceVal;
-        }
 
-        return plainText;
+            return plainText;
+        } else {
+            return "shift not set!";
+        }
     }
 
     @Override
