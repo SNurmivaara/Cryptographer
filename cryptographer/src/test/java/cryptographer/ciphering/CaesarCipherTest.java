@@ -17,12 +17,18 @@ public class CaesarCipherTest {
 
     CaesarCipher cipher = new CaesarCipher();
 
+    /**
+     *
+     */
     @Test
     public void shiftSetterWorks() {
         cipher.setShift(2);
         assertEquals(2, cipher.getShift());
     }
 
+    /**
+     *
+     */
     @Test
     public void cipherWorks() {
         cipher.setShift(2);
@@ -30,6 +36,9 @@ public class CaesarCipherTest {
         assertEquals("cde", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void cipherIgnoresNonAlphabeticalCharacters() {
         cipher.setShift(2);
@@ -37,6 +46,9 @@ public class CaesarCipherTest {
         assertEquals("c d e ä ö !", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void cipherWorksWithShiftsOver26() {
         cipher.setShift(30);
@@ -44,6 +56,9 @@ public class CaesarCipherTest {
         assertEquals("efg", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void cipherCorrectlyWorksWithLastAlphabeticCharacters() {
         cipher.setShift(2);
@@ -51,12 +66,18 @@ public class CaesarCipherTest {
         assertEquals("zab", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void cipherSetsShiftTo0IfNegativeValueEntered() {
         assertFalse(cipher.setShift(-2));
         assertEquals("shift not set!", cipher.cipher("abc"));
     }
 
+    /**
+     *
+     */
     @Test
     public void cipherWorksWithUpperAndLowerCaseLetters() {
         cipher.setShift(2);
@@ -64,6 +85,9 @@ public class CaesarCipherTest {
         assertEquals("cdef", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void decipherWorks() {
         cipher.setShift(2);
@@ -71,6 +95,9 @@ public class CaesarCipherTest {
         assertEquals("abc", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void decipherIgnoresSpecialCharacters() {
         cipher.setShift(2);
@@ -78,6 +105,9 @@ public class CaesarCipherTest {
         assertEquals("a ä !", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void decipherWorksWithFirstAlphabeticalCharacters() {
         cipher.setShift(2);
@@ -85,6 +115,9 @@ public class CaesarCipherTest {
         assertEquals("yza", output);
     }
 
+    /**
+     *
+     */
     @Test
     public void decipherWorksWithUpperAndLowerCaseLetters() {
         cipher.setShift(2);

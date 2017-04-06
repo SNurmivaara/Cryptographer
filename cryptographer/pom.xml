@@ -24,15 +24,15 @@
             <version>3.1</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>19.0</version>
-        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+            </plugin> 
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -48,9 +48,11 @@
                 <configuration>
                     <targetClasses>
                         <param>cryptographer.ciphering.*</param>
+                        <param>cryptographer.tools.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>cryptographer.ciphering.*</param>
+                        <param>cryptographer.tools.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

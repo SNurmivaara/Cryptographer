@@ -1,17 +1,24 @@
 package cryptographer;
 
 import cryptographer.ciphering.CaesarCipher;
+import cryptographer.tools.FileReader;
 import java.util.Scanner;
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
- *
+ * A command line interface for cryptographer
+ * 
  * @author sami
  */
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Simple command line interface
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
         System.out.print("Enter desired cipher (currently only caesar implemented): ");
         switch (scanner.nextLine().toLowerCase()) {
@@ -41,6 +48,11 @@ public class Main {
             default:
                 System.out.println("Input not valid.");
         }
+
+        //For testing purposes for now
+        System.out.println("Choose file");
+        FileReader fr = new FileReader();
+        System.out.println(fr.getFileContentsAsString());
 
     }
 

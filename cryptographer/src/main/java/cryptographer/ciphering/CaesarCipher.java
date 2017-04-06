@@ -11,6 +11,11 @@ public class CaesarCipher implements Cipher {
     private final String alphabet = "abcdefghijklmnopqrstuvwxyz";
     private int shift;
 
+    /**
+     *
+     * @param shift
+     * @return
+     */
     public boolean setShift(int shift) {
         if (shift >= 0) {
             this.shift = shift;
@@ -21,10 +26,19 @@ public class CaesarCipher implements Cipher {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public int getShift() {
         return this.shift;
     }
 
+    /**
+     *
+     * @param input
+     * @return
+     */
     @Override
     public String cipher(String input) {
 
@@ -48,6 +62,11 @@ public class CaesarCipher implements Cipher {
         }
     }
 
+    /**
+     *
+     * @param input
+     * @return
+     */
     @Override
     public String decipher(String input) {
 
@@ -74,11 +93,21 @@ public class CaesarCipher implements Cipher {
         }
     }
 
+    /**
+     *
+     * @param file
+     * @return
+     */
     @Override
     public File cipherFile(File file) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     *
+     * @param file
+     * @return
+     */
     @Override
     public File decipherFile(File file) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
