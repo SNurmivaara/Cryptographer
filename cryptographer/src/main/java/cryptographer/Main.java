@@ -7,7 +7,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 /**
  * A command line interface for cryptographer
- * 
+ *
  * @author sami
  */
 public class Main {
@@ -16,42 +16,34 @@ public class Main {
 
     /**
      * Simple command line interface
-     * 
+     *
      * @param args
      */
     public static void main(String[] args) {
-        System.out.print("Enter desired cipher (currently only caesar implemented): ");
-        switch (scanner.nextLine().toLowerCase()) {
-            case "caesar":
-                Cipher cipher = new Cipher();
-                String shift;
+        Cipher cipher = new Cipher();
+        String key = "";
+        int cipherType;
 
-                System.out.print("Enter string to cipher: ");
-                String input = scanner.nextLine();
-
-                while (true) {
-                    System.out.print("Enter shift to use with cipher: ");
-                    shift = scanner.nextLine();
-                    if (NumberUtils.isNumber(shift)) {
-                        if (Integer.parseInt(shift) < 0) {
-                            System.out.println("Shift can't be under 0!");
-                        } else {
-                            cipher.setShift(Integer.parseInt(shift));
-                            break;
-                        }
-                    } else {
-                        System.out.println("Shift has to be a numeric value!");
-                    }
-                }
-                System.out.println(input + " => " + cipher.decipher(input));
+        System.out.print("Enter desired cipher\n1 for casear shift\n");
+        cipherType = scanner.nextInt();
+        
+        switch (cipherType) {
+            case 1:
+                System.out.println("Enter shift for caesar-cipher:");
+                key = scanner.next();
                 break;
-            default:
-                System.out.println("Input not valid.");
         }
+        cipher.setKey(cipherType, key);
+        
+        System.out.print("Enter string to cipher: ");
+        String input = scanner.next();
+        System.out.println(input + " => " + cipher.cipher(input));
 
         //For testing purposes for now
-        System.out.println("Choose file");
+        System.out.println(
+                "Choose file");
         FileReader fr = new FileReader();
+
         System.out.println(fr.getFileContentsAsString());
 
     }

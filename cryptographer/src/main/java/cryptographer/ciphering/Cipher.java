@@ -37,10 +37,11 @@ public class Cipher implements CipherInterface {
     @Override
     public String cipher(String input) {
         String cipherText = "";
+        System.out.println(key);
 
         switch (key.charAt(0)) {
             case 'c':
-                Integer shift = InputProcessing.tryParse(key.substring(0));
+                Integer shift = InputProcessing.tryParse(key.substring(1));
                 if (shift == null) {
                     System.out.println("problem with parsing shift, sure it's integer?");
                     break;
@@ -77,7 +78,7 @@ public class Cipher implements CipherInterface {
 
         switch (key.charAt(0)) {
             case 'c':
-                Integer shift = InputProcessing.tryParse(key.substring(0));
+                Integer shift = InputProcessing.tryParse(key.substring(1));
                 if (shift == null) {
                     System.out.println("problem with parsing shift, sure it's integer?");
                     break;
