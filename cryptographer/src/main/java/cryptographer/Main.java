@@ -1,6 +1,6 @@
 package cryptographer;
 
-import cryptographer.ciphering.CaesarCipher;
+import cryptographer.ciphering.Cipher;
 import cryptographer.tools.FileReader;
 import java.util.Scanner;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -23,7 +23,7 @@ public class Main {
         System.out.print("Enter desired cipher (currently only caesar implemented): ");
         switch (scanner.nextLine().toLowerCase()) {
             case "caesar":
-                CaesarCipher cipher = new CaesarCipher();
+                Cipher cipher = new Cipher();
                 String shift;
 
                 System.out.print("Enter string to cipher: ");

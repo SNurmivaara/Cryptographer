@@ -13,9 +13,9 @@ import org.junit.Test;
  *
  * @author MaSigMa
  */
-public class CaesarCipherTest {
+public class CipherTest {
 
-    CaesarCipher cipher = new CaesarCipher();
+    Cipher cipher = new Cipher();
 
     /**
      *
@@ -23,7 +23,7 @@ public class CaesarCipherTest {
     @Test
     public void shiftSetterWorks() {
         cipher.setShift(2);
-        assertEquals(2, cipher.getShift());
+        assertEquals(2, cipher.getKey());
     }
 
     /**
