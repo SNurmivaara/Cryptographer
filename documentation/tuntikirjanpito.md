@@ -7,4 +7,4 @@ Päivä | Tunnit | Kuvaus
 02.04.2017 | 4h | Päivitetty dokumentaatio ja tehty koodikatselmointi
 04.04.2017 | 4h | Etenee
 06.04.2017 | 4h | Javadoc luotu, ohjelmoitu. Javadoc keskeneräinen ja testikattavuudessa paranneltavaa
-18.04.2017 | 4h | koodikatselmointi hoidettu, projektia edistetty ja dokumentoiti korjattu huomioiden osalta
+18.04.2017 | 6h | koodikatselmointi hoidettu, javadocit korjattu, checkstyle ja pit nyt ok. Refaktoroitu koodia laajasti.
