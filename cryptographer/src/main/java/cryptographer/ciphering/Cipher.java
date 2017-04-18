@@ -4,7 +4,7 @@ import cryptographer.tools.InputProcessing;
 import java.io.File;
 
 /**
- *
+ * Ciphering and deciphering of inputs.
  * @author sami
  */
 public class Cipher implements CipherInterface {
@@ -13,6 +13,11 @@ public class Cipher implements CipherInterface {
 
     String key;
 
+    /**
+     * Setter the ciphering key.
+     * @param type selecting which cipher to use
+     * @param key the key to use while ciphering
+     */
     public void setKey(int type, String key) {
         switch (type) {
             case 1:
@@ -22,22 +27,21 @@ public class Cipher implements CipherInterface {
     }
 
     /**
-     *
-     * @return
+     * Getter for ciphering key.
+     * @return ciphering key
      */
     public String getKey() {
         return this.key;
     }
 
     /**
-     *
+     * Cipher String input.
      * @param input
-     * @return
+     * @return input ciphered
      */
     @Override
     public String cipher(String input) {
         String cipherText = "";
-        System.out.println(key);
 
         switch (key.charAt(0)) {
             case 'c':
@@ -69,9 +73,9 @@ public class Cipher implements CipherInterface {
     }
 
     /**
-     *
+     * Decipher String input.
      * @param input
-     * @return
+     * @return input deciphered.
      */
     @Override
     public String decipher(String input) {
@@ -109,9 +113,9 @@ public class Cipher implements CipherInterface {
     }
 
     /**
-     *
+     * Cipher input file, currently WIP.
      * @param file
-     * @return
+     * @return contents of file ciphered
      */
     @Override
     public File cipherFile(File file) {
@@ -119,9 +123,9 @@ public class Cipher implements CipherInterface {
     }
 
     /**
-     *
+     * Decipher contents of file, currently WIP.
      * @param file
-     * @return
+     * @return contents of file deciphered.
      */
     @Override
     public File decipherFile(File file) {

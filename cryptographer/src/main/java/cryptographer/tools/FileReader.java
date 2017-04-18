@@ -9,7 +9,7 @@ import java.io.File;
 import javax.swing.JFileChooser;
 
 /**
- *
+ * A tool for reading files.
  * @author MaSigMa
  */
 public class FileReader {
@@ -18,23 +18,23 @@ public class FileReader {
     final JFileChooser fc = new JFileChooser();
 
     /**
-     *
-     * @param file
+     * Setter for files.
+     * @param file file
      */
     public void setFile(File file) {
         this.file = file;
     }
 
     /**
-     *
-     * @return
+     * Getter for files.
+     * @return file
      */
     public File getFile() {
         return this.file;
     }
     
     /**
-     *
+     * A simple JFileChooser implementation.
      */
     public void fileChooser() {
         int returnVal = fc.showOpenDialog(null);
@@ -44,8 +44,8 @@ public class FileReader {
     }
 
     /**
-     *
-     * @return
+     * Return contents of file as a String.
+     * @return contents of file
      */
     public String getFileContentsAsString() {
         return null;

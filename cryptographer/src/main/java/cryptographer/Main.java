@@ -3,10 +3,9 @@ package cryptographer;
 import cryptographer.ciphering.Cipher;
 import cryptographer.tools.FileReader;
 import java.util.Scanner;
-import org.apache.commons.lang3.math.NumberUtils;
 
 /**
- * A command line interface for cryptographer
+ * A command line interface for cryptographer.
  *
  * @author sami
  */
@@ -15,9 +14,9 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     /**
-     * Simple command line interface
+     * Simple command line interface.
      *
-     * @param args
+     * @param args args
      */
     public static void main(String[] args) {
         Cipher cipher = new Cipher();

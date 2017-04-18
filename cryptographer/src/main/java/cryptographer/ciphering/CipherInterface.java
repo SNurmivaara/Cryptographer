@@ -8,36 +8,36 @@ package cryptographer.ciphering;
 import java.io.File;
 
 /**
- *
+ * Interface for different ciphers.
  * @author MaSigMa
  */
 public interface CipherInterface {
     
     /**
-     *
-     * @param input
-     * @return
+     * Ciphering method.
+     * @param input input
+     * @return input ciphered
      */
     String cipher(String input);
     
     /**
-     *
-     * @param input
-     * @return
+     * Deciphering method.
+     * @param input input 
+     * @return input deciphered
      */
     String decipher(String input);
     
     /**
-     *
-     * @param file
-     * @return
+     * Method for ciphering files.
+     * @param file file
+     * @return file ciphered
      */
     File cipherFile(File file);
     
     /**
-     *
-     * @param file
-     * @return
+     * Method for deciphering files.
+     * @param file file
+     * @return deciphered file
      */
     File decipherFile(File file);
 }

@@ -6,11 +6,9 @@
 package cryptographer.tools;
 
 import java.io.File;
-import java.net.URL;
 import org.junit.Test;
 import static org.junit.Assert.assertNotNull;
-import org.junit.Rule;
-import org.junit.rules.ExternalResource;
+import static org.junit.Assert.assertNull;
 
 /**
  *
@@ -30,4 +28,10 @@ public class FileReaderTest {
         assertNotNull(fr.getFile());
     }
     
+    @Test
+    public void fileContentsAsStringWorks() {
+        //Currently WIP feature, added test for future reference
+        assertNull(fr.getFileContentsAsString());
+    }
+
 }
