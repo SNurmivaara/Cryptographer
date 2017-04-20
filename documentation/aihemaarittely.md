@@ -10,4 +10,4 @@ Salata syöte
 
 Purkaa syötteen salaus
 
-![Ciphering sequence](Ciphering input with caesar shift.png)
+![Ciphering sequence](/Ciphering input with caesar shift.png)
