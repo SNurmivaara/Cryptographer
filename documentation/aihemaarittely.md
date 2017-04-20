@@ -1,8 +1,13 @@
-**Aihe:** Salausohjelma; Sovelluksella voi salata ja avata tekstisyötteitä.
+**Aihe:** Salausohjelma; Sovelluksella voi salata ja avata salauksia.
 
-**Users:**
-Yleinen käyttäjä
+**Käyttäjät**
 
-**Available actions for all users:**
+Käyttäjä
+
+**Käyttötapauksia**
+
 Salata syöte
+
 Purkaa syötteen salaus
+
+![Ciphering sequence](Ciphering input with caesar shift.png)
