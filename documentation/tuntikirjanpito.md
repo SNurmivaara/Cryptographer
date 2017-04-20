@@ -8,3 +8,4 @@ Päivä | Tunnit | Kuvaus
 04.04.2017 | 4h | Etenee
 06.04.2017 | 4h | Javadoc luotu, ohjelmoitu. Javadoc keskeneräinen ja testikattavuudessa paranneltavaa
 18.04.2017 | 6h | koodikatselmointi hoidettu, javadocit korjattu, checkstyle ja pit nyt ok. Refaktoroitu koodia laajasti.
+21.04.2017 | 1h | luotu sekvenssikaavio ja päivitelty dokumentaatiota
