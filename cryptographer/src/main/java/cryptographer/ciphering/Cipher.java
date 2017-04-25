@@ -44,10 +44,11 @@ public class Cipher implements CipherInterface {
         String cipherText = "";
 
         switch (key.charAt(0)) {
+            
             case 'c':
                 Integer shift = InputProcessing.tryParse(key.substring(1));
                 if (shift == null) {
-                    System.out.println("problem with parsing shift, sure it's integer?");
+                    System.out.println("Problem with shift entered, please enter an integer");
                     break;
                 }
                 if (shift != -1) {
