@@ -9,13 +9,14 @@ import cryptographer.ciphering.Cipher;
 import javax.swing.JOptionPane;
 
 /**
+ * Main user interface for Cryptographer.
  *
  * @author MaSigMa
  */
 public class MainUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainFrame
+     * Creates new form MainFrame.
      */
     public MainUI() {
         initComponents();

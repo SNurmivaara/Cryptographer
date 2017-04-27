@@ -1,7 +1,6 @@
 package cryptographer;
 
 import cryptographer.ciphering.Cipher;
-import cryptographer.tools.FileReader;
 import java.util.Scanner;
 
 /**

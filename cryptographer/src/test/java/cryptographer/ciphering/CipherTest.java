@@ -118,7 +118,16 @@ public class CipherTest {
     }
     
     @Test
-    public void settingShiftFailsForNonIntegers() {
-        
+    public void settingCaesarShiftToNonIntegerFailsCiphering() {
+        cipher.setKey(1, "a");
+        String output = cipher.cipher("abc");
+        assertEquals("Shift must be an integer", output);
+    }
+    
+    @Test
+    public void settingCaesarShiftToNonIntegerFailsDeciphering() {
+        cipher.setKey(1, "a");
+        String output = cipher.decipher("abc");
+        assertEquals("Shift must be an integer", output);
     }
 }

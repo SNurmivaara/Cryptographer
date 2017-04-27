@@ -5,6 +5,7 @@ import java.io.File;
 
 /**
  * Ciphering and deciphering of inputs.
+ *
  * @author sami
  */
 public class Cipher implements CipherInterface {
@@ -15,6 +16,7 @@ public class Cipher implements CipherInterface {
 
     /**
      * Setter the ciphering key.
+     *
      * @param type selecting which cipher to use
      * @param key the key to use while ciphering
      */
@@ -23,11 +25,14 @@ public class Cipher implements CipherInterface {
             case 1:
                 this.key = "c" + key;
                 break;
+            default:
+                break;
         }
     }
 
     /**
      * Getter for ciphering key.
+     *
      * @return ciphering key
      */
     public String getKey() {
@@ -36,6 +41,7 @@ public class Cipher implements CipherInterface {
 
     /**
      * Cipher String input.
+     *
      * @param input
      * @return input ciphered
      */
@@ -44,12 +50,11 @@ public class Cipher implements CipherInterface {
         String cipherText = "";
 
         switch (key.charAt(0)) {
-            
+
             case 'c':
                 Integer shift = InputProcessing.tryParse(key.substring(1));
                 if (shift == null) {
-                    System.out.println("Problem with shift entered, please enter an integer");
-                    break;
+                    return "Shift must be an integer";
                 }
                 if (shift != -1) {
                     input = input.toLowerCase();
@@ -65,16 +70,16 @@ public class Cipher implements CipherInterface {
                     }
 
                     return cipherText;
-                } else {
-                    return "shift not set!";
                 }
-        }
 
-        return "Error ciphering";
+            default:
+                return "Selected cipher doesn't exist!";
+        }
     }
 
     /**
      * Decipher String input.
+     *
      * @param input
      * @return input deciphered.
      */
@@ -85,8 +90,7 @@ public class Cipher implements CipherInterface {
             case 'c':
                 Integer shift = InputProcessing.tryParse(key.substring(1));
                 if (shift == null) {
-                    System.out.println("problem with parsing shift, sure it's integer?");
-                    break;
+                    return "Shift must be an integer";
                 }
                 if (shift != -1) {
                     input = input.toLowerCase();
@@ -106,15 +110,15 @@ public class Cipher implements CipherInterface {
                     }
 
                     return plainText;
-                } else {
-                    return "shift not set!";
                 }
+            default:
+                return "Selected cipher doesn't exist!";
         }
-        return "Error deciphering";
     }
 
     /**
      * Cipher input file, currently WIP.
+     *
      * @param file
      * @return contents of file ciphered
      */
@@ -125,6 +129,7 @@ public class Cipher implements CipherInterface {
 
     /**
      * Decipher contents of file, currently WIP.
+     *
      * @param file
      * @return contents of file deciphered.
      */
