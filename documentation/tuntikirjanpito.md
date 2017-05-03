@@ -11,3 +11,4 @@ Päivä | Tunnit | Kuvaus
 21.04.2017 | 1h | luotu sekvenssikaavio ja päivitelty dokumentaatiota
 25.04.2017 | 4h | Refaktorointia ja päivittelyä. Luotu demoa varten parempi käytettävyys komentoriviltä, koska UI ei vielä toimi.
 27.04.2017 | 4h | Luotu UI, päivitetty dokumentteja ja luotu JAR
+03.05.2017 | 4h | JavaDoc ja muita viimeistelyjä palautusta varten
