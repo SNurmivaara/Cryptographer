@@ -1,8 +1,7 @@
 ﻿# Cryptographer
 *Cipher and decipher inputs*
 
-This program will be developed incrementally and iteratively during the following weeks!
-
+This program was developed incrementally and iteratively during a couple weeks, meant for learning scrum more so than being impressive in it's own right.
 
 ## Documentation (in Finnish)
 * [aiheen kuvaus](documentation/aiheenKuvausJaRakenne.md)
